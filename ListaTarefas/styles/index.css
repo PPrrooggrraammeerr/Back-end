@@ -1,0 +1,67 @@
+body {
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.adicionar, .alterarStatus {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.adicionar {
+    background: red;
+}
+
+.alterarStatus {
+    background: blue;
+}
+
+.excluir {
+    font-size: 18px;
+    font-weight: bold;
+    background: yellow;
+    padding: 10px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control {
+    margin: auto;
+    background-color: #f4f4f4;
+}
+
+table {
+    text-align: center;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #000;
+}

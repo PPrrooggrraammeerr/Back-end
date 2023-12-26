@@ -1,0 +1,35 @@
+body {
+    font-family: arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+.excluir {
+    font-size: 18px;
+    font-weight: bold;
+    background: yellow;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.adicionar {
+    font-size: 18px;
+    font-weight: bold;
+    color:  #fff;
+    background: red;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.control {
+    margin: auto;
+    background-color: #f4f4f4;
+}
+
+table {
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+}
