@@ -1,0 +1,89 @@
+
+                                     ===============================
+                                               CRUD in PHP
+                                     ===============================
+
+CRIAR UM REGISTRO
+=================
+
+public function inserirUsuarios($email, $senha){
+
+    $sql = "INSERT INTO usuarios SET email = :e, senha = :s";
+
+    $sql = $this->pdo->prepare($sql);
+
+    $sql->bindValue(":e", $email);
+    $sql->bindValue(":s", $senha);
+
+    $sql->execute();
+}
+
+APAGAR UM REGISTRO
+==================
+
+public function deletarUsuarios($id){
+
+    $sql = "DELETE FROM usuarios WHERE id = :id";
+
+    $sql = $this->pdo->prepare($sql);
+
+    $sql->bindValue(":id", $id);
+
+    $sql->execute();
+}
+
+BUSCAR UM REGISTRO
+==================
+
+public function buscarUsuario($id){
+
+    $sql = "SELECT * FROM usuarios WHERE id = :id";
+
+    $sql = $this->pdo->prepare($sql);
+
+    $sql->bindValue(":id", $id);
+
+    $sql->execute();
+
+    if($sql->rowCount() > 0){
+        return $sql->fetch();
+    }else{
+        return array();
+    }
+}
+
+BUSCAR TODOS OS REGISTROS
+=========================
+
+public function buscarUsuarios(){
+
+    $sql = "SELECT * FROM usuarios";
+
+    $sql = $this->pdo->prepare($sql);
+
+    $sql->execute();
+
+    // SABER SE ACHOU O REGISTRO:
+    if($sql->rowCount() > 0){
+        return $sql->fetchAll();
+    }else{
+        return array();
+    }
+}
+
+ALTERAR DADOS DO USUÁRIO
+========================
+
+public function editarContato($id, $email, $senha){
+
+    $sql = "UPDATE usuarios SET email = :e, senha = :s WHERE id = :id";
+
+    $sql = $this->pdo->prepare($sql);
+
+    $sql->bindValue(":id", $id);
+    $sql->bindValue(":e", $email);
+    $sql->bindValue(":s", $senha);
+
+    $sql->execute();
+
+}
