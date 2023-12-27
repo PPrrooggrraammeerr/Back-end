@@ -63,7 +63,6 @@ public function buscarUsuarios(){
 
     $sql->execute();
 
-    // SABER SE ACHOU O REGISTRO:
     if($sql->rowCount() > 0){
         return $sql->fetchAll();
     }else{
